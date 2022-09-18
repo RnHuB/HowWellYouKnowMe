@@ -36,13 +36,13 @@ const questions = [
 
 function calculateAnswer(question , answer){
   var userAnswer = readlineSync.question(question);
-  console.log(chalk.bold.underline.yellow(userAnswer) + ' is correct answer\n');
-
   if(userAnswer.toUpperCase() === answer.toUpperCase()){
+    console.log(chalk.bold.underline.yellow(userAnswer) + ' is correct answer\n');
     user.score++;
     console.log("Score: " + chalk.bold.inverse.green(user.score));
   }
   else{
+    console.log(chalk.bold.underline.yellow(userAnswer) + ' is wrong answer\n');
     console.log("Score: " + chalk.bold.inverse.red(user.score));
   
   }
